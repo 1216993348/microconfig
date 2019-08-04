@@ -7,5 +7,5 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class StartProvicerDetp_8001 {
 	public static void main(String[] args) throws Exception{
 		 SpringApplication.run(StartProvicerDetp_8001.class,args);
-	} 
+	}    
 }
