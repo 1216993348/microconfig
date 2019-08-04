@@ -10,4 +10,4 @@ spring:
 spring:
   profiles: beta
   application:
-    name: microconfig-beta 
+    name: microconfig-beta  
