@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  application:
+    name: microconfig-dev 
+---
+spring:
+  profiles: beta
+  application:
+    name: microconfig-beta  
