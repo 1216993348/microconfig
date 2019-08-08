@@ -10,8 +10,4 @@ spring:
 spring:
   profiles: beta
   application:
-<<<<<<< HEAD:src/main/resources/application.yml
     name: microconfig-beta
-=======
-    name: microconfig-beta  
->>>>>>> dev:application.yml
