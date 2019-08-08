@@ -1,5 +1,4 @@
 spring:
-  profiles: dsadasdev
   application:
     name: microconfig-default
 ---
