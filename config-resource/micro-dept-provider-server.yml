@@ -8,6 +8,10 @@ spring:
   profiles: dev
   application:
     name: micro-dept-provider-server
+  security:
+    user:
+      name: xhy
+      password: 1216
   jackson:
     serialization:
       write-dates-as-timestamps: true
