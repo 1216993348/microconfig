@@ -12,7 +12,7 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-       defaultZone: http://eadmin:123456@eureka-7001.com:7001/eureka
+       defaultZone: http://xhy:1216@eureka-7001.com:7001/eureka
 spring:
   application:
     name: micro-dept-provider-server
