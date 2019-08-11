@@ -6,6 +6,13 @@ info:
   company.name: www.xhy.cn
   pom.version: $project.version$
   pom.artifactId: $project.artifactId$
+eureka:
+  instance:
+    instance-id: micro-dept-provider-server
+    prefer-ip-address: true
+  client:
+    service-url:
+       defaultZone: http://eadmin:123456@eureka-7001.com:7001/eureka
 spring:
   application:
     name: micro-dept-provider-server
