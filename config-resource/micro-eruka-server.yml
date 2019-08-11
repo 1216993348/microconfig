@@ -1,0 +1,57 @@
+spring:
+  profiles:
+    active: dev-7001
+---
+spring:
+  profiles: dev-7001
+  application:
+    name: microcloud-eureka
+  security:
+    
+    user:
+      password: 
+server:
+  #指定服务端口
+  port: 7001
+eureka:
+  #指定主机名称
+  instance:
+    hostname: microcloud-eureka-7001
+  client:
+    registerWithEureka: false 
+    fetchRegistry: false
+    service-url:
+     # defaultZone: http://eadmin:123456@eureka-7002.com:7002/eureka/,http://eadmin:123456@eureka-7003.com:7003/eureka/
+      defaultZone: http://eureka-7001.com:7001/eureka/
+---
+spring:
+  profiles: microcloud-eureka-7002
+server:
+  #指定服务端口
+  port: 7002
+eureka:
+  #指定主机名称
+  instance:
+    hostname: eureka-7002.com 
+  #server一定程度上也是client，互为client,当配置了registerWithEureka=false、fetchRegistry=false相当于是在定义server
+  client:
+    registerWithEureka: false 
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://eureka-7001.com:7001/eureka/,http://eureka-7003.com:7003/eureka/
+---
+spring:
+  profiles: microcloud-eureka-7003
+server:
+  #指定服务端口
+  port: 7003
+eureka:
+  #指定主机名称
+  instance:
+    hostname: eureka-7003.com 
+  #server一定程度上也是client，互为client,当配置了registerWithEureka=false、fetchRegistry=false相当于是在定义server
+  client:
+    registerWithEureka: false 
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://eureka-7001.com:7001/eureka/,http://eureka-7002.com:7002/eureka/
