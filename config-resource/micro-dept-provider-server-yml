@@ -1,19 +1,7 @@
 server: 
   port: 8001
-info: 
-  app.name: micro-dept-provider-server
-  app.version: v1.0.0
-  company.name: www.xhy.cn
-  pom.version: $project.version$
-  pom.artifactId: $project.artifactId$
-eureka:
-  instance:
-    instance-id: micro-dept-provider-server
-    prefer-ip-address: true
-  client:
-    service-url:
-       defaultZone: http://xhy:1216@eureka-7001.com:7001/eureka
 spring:
+  profiles: dev
   application:
     name: micro-dept-provider-server
   jackson:
@@ -46,3 +34,16 @@ mybatis:
 
 
  
+info: 
+  app.name: micro-dept-provider-server
+  app.version: v1.0.0
+  company.name: www.xhy.cn
+  pom.version: $project.version$
+  pom.artifactId: $project.artifactId$
+eureka:
+  instance:
+    instance-id: micro-dept-provider-server
+    prefer-ip-address: true
+  client:
+    service-url:
+       defaultZone: http://xhy:1216@eureka-7001.com:7001/eureka
