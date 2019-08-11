@@ -1,6 +1,7 @@
 server: 
   port: 8001
 spring:
+  profiles: dev
   application:
     name: micro-dept-provider-server
   jackson:
