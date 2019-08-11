@@ -1,15 +1,15 @@
 spring:
   profiles:
-    active: dev-7001
+    active: dev
 ---
 spring:
-  profiles: dev-7001
+  profiles: dev
   application:
     name: microcloud-eureka
   security:
-    
     user:
-      password: 
+      name: xhy
+      password: 122344
 server:
   #指定服务端口
   port: 7001
@@ -25,7 +25,7 @@ eureka:
       defaultZone: http://eureka-7001.com:7001/eureka/
 ---
 spring:
-  profiles: microcloud-eureka-7002
+  profiles: beta
 server:
   #指定服务端口
   port: 7002
@@ -41,7 +41,7 @@ eureka:
       defaultZone: http://eureka-7001.com:7001/eureka/,http://eureka-7003.com:7003/eureka/
 ---
 spring:
-  profiles: microcloud-eureka-7003
+  profiles: master
 server:
   #指定服务端口
   port: 7003
