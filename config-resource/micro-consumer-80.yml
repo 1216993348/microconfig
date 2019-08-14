@@ -4,10 +4,7 @@ eureka:
   client:
     register-with-eureka: false # 不需要注册 ，  但  fetchRegistry一定得是: true，因为需要获取信息
     service-url:
-      #defaultZone: "http://eadmin:123456@eureka-7001.com:7001/eureka\
-       # ,http://eadmin:123456@eureka-7002.com:7002/eureka\
-       # ,http://eadmin:123456@eureka-7003.com:7003/eureka"
-      defaultZone: http://eadmin:123456@eureka-7001.com:7001/eureka
+      defaultZone: http://xhy:1216@eureka-7001.com:7001/eureka
 spring:
   servlet:
     multipart:
