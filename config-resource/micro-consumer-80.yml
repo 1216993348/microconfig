@@ -1,0 +1,33 @@
+server:
+  port: 80
+eureka:
+  client:
+    register-with-eureka: false # 不需要注册 ，  但  fetchRegistry一定得是: true，因为需要获取信息
+    service-url:
+      #defaultZone: "http://eadmin:123456@eureka-7001.com:7001/eureka\
+       # ,http://eadmin:123456@eureka-7002.com:7002/eureka\
+       # ,http://eadmin:123456@eureka-7003.com:7003/eureka"
+      defaultZone: http://eadmin:123456@eureka-7001.com:7001/eureka
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+        
+feign:
+  hystrix:
+    enabled: true
+  compression:
+    request:
+      mime-types:           # 需要被压缩的类型
+      - text/xml
+      - application/xml
+      - application/json
+      min-request-size: 1024 #超过1024字节进行压缩
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["*"]   
+logging:
+  level:
+    cn.xhy.service: DEBUG
