@@ -1,0 +1,25 @@
+server: 
+  port: 8101
+eureka:
+  instance:
+    instance-id: company-8101.com
+    prefer-ip-address: true
+  client:
+    service-url:
+       defaultZone: http://xhy:1216@eureka-7001.com:7001/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["*"]
+info: 
+  app.name: microcloud
+  app.version: v1.0.0
+  company.name: www.xhy.cn
+  pom.version: $project.version$
+  pom.artifactId: $project.artifactId$
+spring:
+  application:
+    name: microcloud-provider-company
+
+ 
