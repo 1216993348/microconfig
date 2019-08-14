@@ -12,12 +12,6 @@ management:
     web:
       exposure:
         include: ["*"]
-info: 
-  app.name: microcloud
-  app.version: v1.0.0
-  company.name: www.xhy.cn
-  pom.version: $project.version$
-  pom.artifactId: $project.artifactId$
 spring:
   application:
     name: microcloud-provider-company
