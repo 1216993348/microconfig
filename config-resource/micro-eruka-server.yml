@@ -16,7 +16,7 @@ server:
 eureka:
   #指定主机名称
   instance:
-    hostname: microcloud-eureka-7001
+    hostname: microcloud-eureka-7001update
   client:
     registerWithEureka: false 
     fetchRegistry: false
